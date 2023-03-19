@@ -1,0 +1,31 @@
+.item{
+  border: 2px solid #E3E3E3;
+  @apply rounded-[20px];
+  &__button{
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    @apply w-full p-2 text-[16px] leading-[20px];
+  }
+  &__info,&__order{
+    background: #F4F4F4;
+    @apply text-[16px] leading-5 p-2.5 rounded-[10px] grow max-w-[150px]
+  }
+  &__order{
+    background: linear-gradient(270deg, rgba(241, 165, 201, 0.25) 0%, rgba(255, 237, 0, 0.25) 124.85%, rgba(255, 237, 0, 0.25) 124.85%);
+  }
+  @media (max-width: 1300px) {
+    &__button{
+      @apply text-[10px]
+    }
+  }
+  @media (max-width: 1000px) {
+    &__button{
+      @apply text-[8px] p-1
+    }
+  }
+  @media (max-width: 800px) {
+    &__info,&__order{
+      @apply text-[10px] leading-3
+    }
+  }
+}

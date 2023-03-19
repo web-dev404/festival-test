@@ -1,0 +1,51 @@
+.item{
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #FFED00 , #FFED00) border-box;
+  border: 2px solid transparent;
+  @apply rounded-[20px] text-center p-2.5 pt-4;
+  &__field{
+    color: #000000;
+    border: 0.25px solid #8C8C8C;
+    @apply text-[20px] leading-[24px] placeholder-black p-2.5 rounded-[10px] outline-none px-2.5;
+  }
+  &__button{
+    background: linear-gradient(270deg, #F1A5C9 0%, #FFED00 124.85%, #FFED00 124.85%);
+    @apply w-[342px] text-[18px] leading-[22px] p-5 rounded-[10px] text-white;
+  }
+  &__blue{
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #9FD8F3 , #F1A5C9) border-box;
+    .item__button{
+      background: linear-gradient(270deg, #F1A5C9 0%, #9FD8F3 124.85%, #F1A5C9 124.85%);
+    }
+  }
+  @media (max-width: 1000px) {
+    &__button{
+     @apply text-[14px] leading-[14px] min-w-[200px] w-auto
+    }
+    &__field{
+      @apply text-[14px] leading-[14px]
+    }
+  }
+  @media (max-width: 1000px) {
+    &__button{
+      @apply p-4
+    }
+  }
+  @media (max-width: 800px) {
+    &__field{
+      @apply text-[14px] leading-[14px] h-[50px]
+    }
+    &__button{
+      @apply text-[12px] leading-[12px] p-3
+    }
+  }
+  @media (max-width: 480px) {
+    &__field{
+      @apply text-[12] h-[40px]
+    }
+    &__button{
+      @apply w-full min-w-0
+    }
+  }
+}

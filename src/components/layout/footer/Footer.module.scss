@@ -1,0 +1,26 @@
+@use "sass:math";
+
+.footer {
+	&__name{
+		@apply leading-6 text-[20px] block mb-5
+	}
+	&__link{
+		@apply leading-4 text-sm
+	}
+	@media (max-width: 1300px) {
+		&__name{
+			@apply text-[16px] mb-3
+		}
+		&__link{
+			@apply text-[12px] leading-3
+		}
+	}
+	@media (max-width: 800px) {
+		&__name{
+			@apply mb-2
+		}
+		&__link{
+            @apply text-[10px] leading-3
+        }
+	}
+}

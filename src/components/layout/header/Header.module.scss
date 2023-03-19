@@ -1,0 +1,47 @@
+@use "sass:math";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color 0.3s ease 0s, transform 0.7s ease 0s;
+	will-change: transform;
+	&__item{
+		border: 0.25px solid #8C8C8C;
+		@apply flex p-1 rounded-lg text-base leading-5 items-center
+	}
+	&__number,&__reg{
+		background: linear-gradient(white, white) padding-box,
+		linear-gradient(to right, #9FD8F3 , #F1A5C9) border-box;
+		border: 2px solid transparent;
+		@apply min-w-[220px] text-center p-3 rounded-[10px] overflow-hidden flex items-center justify-center
+	}
+	&__reg{
+		background: linear-gradient(white, white) padding-box,
+		linear-gradient(to right, #FFED00 , #F1A5C9) border-box;
+	}
+	@media (max-width:1875px) {
+		&__item{
+			@apply text-[12px];
+		}
+		&__number,&__reg{
+			@apply min-w-[150px]
+		}
+	}
+	@media (max-width: 1000px) {
+		&__item{
+			@apply text-[10px] leading-3
+		}
+		&__number,&__reg{
+			@apply min-w-[90px] p-1.5
+		}
+	}
+	@media (max-width: 800px) {
+		&__item{
+			@apply text-[8px] leading-3
+		}
+	}
+}

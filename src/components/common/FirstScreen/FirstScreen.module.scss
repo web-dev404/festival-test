@@ -1,0 +1,81 @@
+.screen{
+  background: url("/img/firstbackground-1.png") center/cover;
+  position: relative;
+  &__bottom{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    @apply absolute bottom-0 left-0 w-full pb-2.5 after:absolute bottom-0 left-0 after:w-full after:h-2.5;
+    &::after{
+      background: linear-gradient(270deg, #F1A5C9 0%, #FFED00 124.85%, #FFED00 124.85%);
+    }
+  }
+  &__item{
+    @apply text-[24px] leading-[22px] text-center py-5 text-white relative after:absolute after:h-[50px] after:w-px after:bg-white after:bottom-1/2 after:right-[-10px] after:translate-y-1/2 last-of-type:after:hidden
+  }
+  &__itemActive{
+    @apply text-[32px] leading-[38px] font-bold
+  }
+  &__block{
+    background: linear-gradient(270deg, #F1A5C9 0%, #FFED00 124.85%, #FFED00 124.85%);
+    @apply absolute top-[70px] right-[10px] rounded-[80px] p-[30px] font-extrabold text-white text-[50px]
+  }
+  &__blue{
+    .screen__bottom{
+      &::after{
+        background: linear-gradient(270deg, #F1A5C9 0%, #9FD8F3 124.85%, #9FD8F3 124.85%);
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    &__block{
+      @apply p-[20px] text-[30px]
+    }
+    &__item{
+      @apply text-[20px] py-4
+    }
+    &__itemActive{
+      @apply text-[22px]
+    }
+  }
+  @media (max-width: 1000px) {
+    &__block{
+      @apply p-[15px] text-[20px] top-[40px]
+    }
+    &__item{
+      @apply text-[16px] py-3
+    }
+    &__itemActive{
+      @apply text-[18px]
+    }
+  }
+  @media (max-width: 800px) {
+    &__block{
+      @apply top-[20px] text-[15px]
+    }
+    &__item{
+      @apply text-[13px] py-2
+    }
+    &__itemActive{
+      @apply text-[15px]
+    }
+  }
+  @media (max-width: 600px) {
+    &__item{
+      @apply text-[10px] py-2 after:h-[25px]
+    }
+    &__itemActive{
+      @apply text-[11px]
+    }
+  }
+  @media (max-width: 480px) {
+    &__item{
+      @apply text-[7px] py-3 after:right-[-7px] leading-3
+    }
+    &__itemActive{
+      @apply text-[8px]
+    }
+    &__block{
+      @apply text-[12px]
+    }
+  }
+}

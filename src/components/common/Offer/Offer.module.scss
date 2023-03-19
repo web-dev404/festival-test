@@ -1,0 +1,39 @@
+.offer{
+  background: url("/img/background.png") center/cover,  linear-gradient(288.03deg, #9FD0FF 0%, #A5D7FF 59.92%);
+  &__supfield{
+    @apply leading-[17px] text-[14px] block mb-2.5
+  }
+  &__send{
+    background: linear-gradient(270deg, #F1A5C9 0%, #FFED00 124.85%, #FFED00 124.85%);
+    @apply rounded-[10px] text-[18px] leading-[22px] w-full py-[18px] text-white
+  }
+  &__field{
+    @apply rounded-[10px] bg-white w-full h-[50px] text-[16px] outline-none px-2.5
+  }
+  @media (max-width: 1000px) {
+    &__supfield{
+      @apply text-[10px]
+    }
+    &__field{
+      @apply text-[12px] leading-[14px] h-[50px]
+    }
+    &__send{
+      @apply text-[14px] py-[14px]
+    }
+  }
+  @media (max-width: 800px) {
+    &__field{
+      @apply  text-[10px] h-[45px]
+    }
+    &__send{
+      @apply text-[12px] py-[12px]
+    }
+  }
+  @media (max-width: 700px) {
+    &__field{
+      @apply h-[40px]
+    }
+  }
+  @media (max-width:480px) {
+  }
+}
